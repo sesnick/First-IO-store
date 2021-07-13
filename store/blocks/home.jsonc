@@ -1,15 +1,40 @@
 {
   "store.home": { 
     "blocks": [
+      "modal-trigger#first",
       "rich-text",
       "info-card#button-right",
       "info-card#button-left",
       "flex-layout.row",
       "slider-layout#home",
       "responsive-layout.desktop#desktop",
-      "responsive-layout.mobile#mobile"
+      "responsive-layout.mobile#mobile",
+      "list-context.product-list"      
     ]
   },
+  "modal-trigger#first":{
+    "children":[
+      "rich-text#trigger",
+      "modal-layout#first"
+    ]
+  },
+  "rich-text#trigger":{
+    "props":{
+      "text" :"CLICK ME"
+    }
+  },
+  "modal-layout#first":{
+    "children":[
+      "rich-text#hello"
+    ]
+  },
+ "rich-text#hello": {
+   "props": {
+    "text": "Hello"
+      }
+   },
+    
+
   "rich-text": { 
     "props": { 
       "text": "RANDOM Fashion Co.",
@@ -129,5 +154,28 @@
       "src": "https://appliancetheme.vteximg.com.br/assets/vtex.file-manager-graphql/images/major_appliance_banner___bb10093866a127345ddfbcca3efa5022.png",
       "maxWidth": "100%"
     }
-  }
+  },
+   "list-context.product-list": {
+     "blocks": ["product-summary.shelf"],
+     "children": ["slider-layout"]
+   },
+   "product-summary.shelf": {
+     "children": [
+     "modal-trigger#quickview",
+     "product-summary-name",
+     "product-selling-price"
+    ]
+  },
+  "modal-trigger#quickview":{
+    "children":["product-summary-image", "modal-layout#quickview"]
+  },
+   "modal-layout#quickview": {
+       "children": [
+         "product-summary-name",
+         "product-images",
+         "product-summary-sku-selector",
+         "product-summary-quantity",
+         "add-to-cart-button"
+       ]
+     }
 }
