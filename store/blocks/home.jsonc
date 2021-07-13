@@ -9,7 +9,9 @@
       "slider-layout#home",
       "responsive-layout.desktop#desktop",
       "responsive-layout.mobile#mobile",
-      "list-context.product-list"      
+      "list-context.product-list",
+      "info-card#clearance",
+      "info-card#vintage"      
     ]
   },
   "modal-trigger#first":{
@@ -43,6 +45,31 @@
       "font": "t-heading-1"
     }
   },
+  "info-card#clearance": {
+    "props": {
+      "id": "info-card-clearance",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
+      "headline": "Clearance Sale",
+      "callToActionText": "DISCOVER",
+      "callToActionUrl": "/sale/d",
+      "textAlignment": "center"
+    }
+  },
+"info-card#vintage": {
+    "props": {
+        "id": "info-card-vintage",
+        "isFullModeStyle": false,
+        "textPosition": "right",
+        "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-rosa-min.png",
+        "headline": "Vintage",
+        "callToActionText": "DISCOVER",
+        "callToActionUrl": "/sale/d",
+        "textAlignment": "center",
+        "blockClass": "vintage"
+    }
+},
   "responsive-layout.desktop#desktop": {
     "children": ["rich-text#desktop","image#desktop"]
   },
